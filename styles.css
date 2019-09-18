@@ -4,7 +4,7 @@
 */
 
 .article{
-  background-image:url("Images/anotherone.jpg");
+  background-image:url("Img/anotherone.webp");
   background-color: #3d3939;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 }
 
 #topImage{
-  background-image:url("Images/computerfinal.jpg");
+  background-image:url("Img/computerfinal.webp");
   background-color: #3d3939;
   background-position: center;
   background-repeat: no-repeat;
@@ -217,7 +217,7 @@ button{
 }
 
 .cont{
-    background-image:url("Images/anotherone.jpg");
+    background-image:url("Img/anotherone.webp");
     background-color: #3d3939;
     background-position: center;
     background-repeat: no-repeat;
