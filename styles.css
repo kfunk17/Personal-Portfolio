@@ -4,12 +4,14 @@
 */
 
 .article{
-  background-image:url("Img/anotherone.webp");
+  background-image:url("Img/ANOTHER.jpg");
   background-color: #3d3939;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  background-attachment: fixed;
+  
 }
 
 #topImage{
@@ -66,8 +68,8 @@ html{
 
 body{
     height: auto;
-    width: 86%;
-    margin-left: 7.3%;
+   
+
     margin-top: -5px;
     margin-bottom:10px;
 }
@@ -217,10 +219,11 @@ button{
 }
 
 .cont{
-    background-image:url("Img/anotherone.webp");
+    background-image:url("Img/ANOTHER.jpg");
     background-color: #3d3939;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
