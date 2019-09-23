@@ -1,3 +1,7 @@
+
+
+
+
 //JavaScript for Personal Portfolio - Karie Funk | Code Attribution: https://codepen.io/hi-im-si/pen/DHoup | Author of code: Simon Shahriveri
 
 var TxtType = function(el, toRotate, period) {
@@ -56,3 +60,5 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+

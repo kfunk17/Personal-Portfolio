@@ -68,7 +68,7 @@ html{
 
 body{
     height: auto;
-   
+    margin: 0px;
 
     margin-top: -5px;
     margin-bottom:10px;
@@ -100,10 +100,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .navbar {
   width: 100%;
   margin-bottom:-20px;
-  overflow: auto;
+  overflow: hidden;
   background-color: #212429;
   border-top:2px solid white;
   border-bottom: 1px solid white;
+  z-index: 99999;
+  
 }
 
 .navbar a {
@@ -113,6 +115,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-decoration: none;
   font-size: 17px;
   text-align: center;
+  display: block;
 }
 
 .navbar a:hover {
@@ -128,9 +131,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: black;
 }
 
-.navbar-fixed {
+.sticky {
   position: fixed;
-  top: -($nav-height);
+  top: 0;
+  overflow: none;
+
+
+}
+
+.sticky + .content {
+  padding-top: 60px;
+
 }
 
 
@@ -243,7 +254,10 @@ button{
     font-family: 'Montserrat', sans-serif;
   }
 
+  /*Project Adobe Gallery */
 
+  
+            
 /*Responsive code */
 @media screen and (max-width: 500px) {
   .navbar a {
@@ -312,6 +326,8 @@ h3 a:hover{
    margin-top:-58px;
    border-top:1px solid white;
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -424,7 +440,7 @@ text-decoration: none;
   background-color: #202125;
   width:100%;
   margin-top:-40px;
-    }
+}
  
   
 }

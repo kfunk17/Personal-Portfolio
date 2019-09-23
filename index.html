@@ -27,12 +27,13 @@
               </h1>
   
             </div>
+       
                     
             <div class="navbar" id="navbar">
-                <a class="active" href="index.html#logo">Home</a> 
-                <a href="index.html#article">About</a> 
-                <a href="index.html#heading">Projects</a> 
-                <a href="index.html#cont">Contact</a>
+                <a class="active" href="index.html#logo" href="javascript:void(0)">Home</a> 
+                <a href="index.html#article" href="javascript:void(0)">About</a> 
+                <a href="index.html#heading" href="javascript:void(0)">Projects</a> 
+                <a href="index.html#cont" href="javascript:void(0)">Contact</a>
             </div>
 
        
@@ -59,7 +60,7 @@
              
               <!--Gallery for Projects-->
               <div class="row">
-                  <p id="heading" class="heading">Project Gallery</p>
+                  <p id="heading" class="heading">GitHub Project Gallery</p>
                     <div class="proj-gal">
 
                         <div class="round">
@@ -125,6 +126,9 @@
                     <div class="row"></div></div>
                     <div class="row"></div></div>
 
+             <!--Adobe Project Gallery-->
+           
+
 
               <!--Contact Section-->
                       <div class="cont" id="cont">
@@ -141,12 +145,22 @@
                       Built by Karie Funk 2019
                     </footer>
 
-<script>
+                    <script>
 
-
-
-
-</script>
+                      
+                        window.onscroll = function() {myFunction()};
+                        
+                        var navbar = document.getElementById("navbar");
+                        var sticky = navbar.offsetTop;
+                        
+                        function myFunction() {
+                          if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                          } else {
+                            navbar.classList.remove("sticky");
+                          }
+                        }
+                        </script>
               
 </body>
 </html> 
