@@ -21,7 +21,7 @@ body {
 }
 
 #topImage{
-  background-image:url("Images/computerfinal.jpg");
+  background-image:url("../Images/computerfinal.jpg");
   background-color: #3d3939;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,6 +97,7 @@ body {
 .column {
   float: left;
   width: 25%;
+  margin-top:50px;
 }
 
 /* The Modal (background) */
@@ -120,7 +121,7 @@ body {
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
+  max-width: 600px;
 }
 
 /* The Close Button */
@@ -278,16 +279,22 @@ button:hover{
 
 <div class="row">
   <div class="column">
-    <img id="size" src="nosql-data-diagrams/ORD.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img id="size" src="../nosql-data-diagrams/ORD.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img id="size" src="nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img id="size" src="../nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img id="size" src="nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img id="size" src="../nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img id="size" src="nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img id="size" src="../nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="size" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="size" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
   </div>
 </div>
 
@@ -296,23 +303,33 @@ button:hover{
   <div class="modal-content">
 
     <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img id="re-size" src="nosql-data-diagrams/ORD.png" style="width:100%">
+      <div class="numbertext">1 / 6</div>
+      <img id="re-size" src="../nosql-data-diagrams/ORD.png" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img id="re-size" src="nosql-data-diagrams/data-structure1.png" style="width:100%">
+      <div class="numbertext">2 / 6</div>
+      <img id="re-size" src="../nosql-data-diagrams/data-structure1.png" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img id="re-size"  src="nosql-data-diagrams/data-structure2.png" style="width:100%">
+      <div class="numbertext">3 / 6</div>
+      <img id="re-size"  src="../nosql-data-diagrams/data-structure2.png" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img id="re-size" src="nosql-data-diagrams/data-structure3.png" style="width:100%">
+      <div class="numbertext">4 / 6</div>
+      <img id="re-size" src="../nosql-data-diagrams/data-structure3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img id="re-size" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img id="re-size" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -324,16 +341,22 @@ button:hover{
 
 
     <div class="column">
-      <img class="demo cursor" src="nosql-data-diagrams/ORD.png" style="width:100%" onclick="currentSlide(1)" alt="ORD">
+      <img class="demo cursor" src="../nosql-data-diagrams/ORD.png" style="width:100%" onclick="currentSlide(1)" alt="ORD">
     </div>
     <div class="column">
-      <img class="demo cursor" src="nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="currentSlide(2)" alt="Data Structure 1">
+      <img class="demo cursor" src="../nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="currentSlide(2)" alt="Data Structure 1">
     </div>
     <div class="column">
-      <img class="demo cursor" src="nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="currentSlide(3)" alt="Data Structure 2">
+      <img class="demo cursor" src="../nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="currentSlide(3)" alt="Data Structure 2">
     </div>
     <div class="column">
-      <img class="demo cursor" src="nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="currentSlide(4)" alt="Data Structure 3">
+      <img class="demo cursor" src="../nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="currentSlide(4)" alt="Data Structure 3">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%" onclick="currentSlide(4)" alt="ORD 2.2">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%" onclick="currentSlide(4)" alt="Data Structure 2.2">
     </div>
   </div>
 </div>
