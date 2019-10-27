@@ -31,7 +31,6 @@ body {
   height: 450px;
 }
 
-  
 .navbar {
   width: 100%;
   margin-bottom:-20px;
@@ -67,6 +66,19 @@ body {
 
 .navbar a.active:hover{
   color: black;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: none;
+
+
+}
+
+.sticky + .content {
+  padding-top: 60px;
+
 }
 
 * {
@@ -164,10 +176,20 @@ button:hover{
 
 <div class="card">
     <div class="card-body">
+      <h2>REST Presentation</h2>
         <video controls autoplay reload="none" style="width:600px;">
              <source src="../restful-api-presentations/REST.m4v" type="video/mp4" />
         </video>
     </div>
+</div> 
+
+<div class="card">
+  <div class="card-body">
+      <h2>RESTFul API's Presentation</h2>
+      <video controls autoplay reload="none" style="width:600px;">
+           <source src="../restful-api-presentations/2.2RESTfulAPI.m4v" type="video/mp4" />
+      </video>
+  </div>
 </div> 
 
 <a href="../index.html"><button>Go Back</button></a>
@@ -176,3 +198,20 @@ button:hover{
         
 
 <footer> Built by Karie Funk 2019 </footer>
+
+<script>
+
+                      
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+</script>
