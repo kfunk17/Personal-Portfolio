@@ -1,434 +1,177 @@
-<!--
-    Author: Karie Funk
-    This is the web page for the NoSQL diagrams. 
-    Code Attribution for the lightbox: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_lightbox
--->
+<!--Karie Funk | Personal Portfolio | Updated Sept. 8th, 2019-->
+<!--Photos used are either taken by me or taken from www.unsplash.com-->
+
 <!DOCTYPE html>
 <html>
+<html lang="en">
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: Verdana, sans-serif;
-  margin: 0;
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<link href="styles.css" rel="stylesheet">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="script.js"></script>
+</head>
 
-  background-color: white;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  background-attachment: fixed;
-}
-
-#topImage{
-  background-image:url("../Images/computerfinal.jpg");
-  background-color: #3d3939;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 1920px;
-  text-align: center;
-  padding-top:20em;
-  width:100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 450px;
-}
-
-.navbar {
-  width: 100%;
-  margin-bottom:-20px;
-  overflow: hidden;
-  background-color: #212429;
-  border-top:2px solid white;
-  border-bottom: 1px solid white;
-  z-index: 99999;
-
-  
-}
-
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  text-align: center;
-  display: block;
-  font-size: 16px;
-  
-}
-
-.navbar a:hover {
-  background-color: white;
-  color: black;
-}
-
-.navbar a.active {
-  color: #b2d690;
-}
-
-.navbar a.active:hover{
-  color: black;
-}
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-.row{
-  padding-top:70px;
-  padding-bottom: 50px;
-}
-
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 25%;
-  margin-top:50px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 600px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.mySlides {
-  display: none;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: green;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-img {
-  margin-bottom: -4px;
-  
-}
-
-#size{
-  height: 200px;
-  width: 300px;
-}
-
-#re-size{
-    height: 450px;
-
-
-}
-
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-h2{
-    padding-top:35px;
-}
-
-footer{
-  background-color: black;
-  text-align: center;
-  height: 30px;
-  color: white;
-  font-family: 'Darker Grotesque', sans-serif;
-}
-
-button{
-    width:60px;
-    height:30px;
-    margin-left:600px;
-    margin-bottom:100px;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-}
-
-button:hover{
-    background-color: #3d3939;
-    color: white;
-}
-
-</style>
 <body>
+       <header>
+            <div id="topImage">
+               <h1>
+                   <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Karie.", "Im a designer.", "Im a developer." ]'>
+                   <span class="wrap"></span>
+                  </a>
+              </h1>
+  
+            </div>
+       
+                    
+            <div class="navbar" id="navbar">
+                <a class="active" href="index.html#logo" href="javascript:void(0)">Home</a> 
+                <a href="index.html#article" href="javascript:void(0)">About</a> 
+                <a href="index.html#heading" href="javascript:void(0)">Projects</a>
+                <a href="web-335/funk-diagrams.html">Diagrams</a>
+                <a href="web-420/funk-rest.html">Presentations</a>   
+                <a href="index.html#cont" href="javascript:void(0)">Contact</a>
+            </div>
 
-        <header>
+       
+
+       </header>
            
-                <div id="topImage"></div>
+          <!--About Article-->
+            <div class="article" id="article">
+                  <h1><img class="img" src="Images/karie3.jpg" alt="Photo of Karie Funk"  /></h1>
+              <div class="box">
+                  <p class="about">  
+                              My name is Karie Funk and I love cats, coffee, music, and web design. 
+                              I have been interested in web design/development
+                              for a few years now and love learning about new technologies and design 
+                              techniques. I am currently earning my BS in Web Development through
+                               Bellevue University and am looking for experience in the web development field.
+                               I love being able to create something beautiful and meaningful with code. I also have 
+                               a strong passion for detail, which I feel is very important in this line of work. 
+                               While I have knowledge of HTML, CSS, and JavaScript I also have knowledge of Adobe
+                               Photoshop, InDesign, & Illustrator.</p>
+              </div>
+              <div class="about-space"></div>
+              </div>
+             
+              <!--Gallery for Projects-->
+              <div class="row">
+                  <p id="heading" class="heading">GitHub Project Gallery</p>
+                    <div class="proj-gal">
+
+                        <div class="round">
+                         <img src="Images/Web101.png" alt="Image of my bioSite" >
+                        <div class="top-coat">
+                          <div class="caption">
+                              <a href="https://kfunk17.github.io/bioSite/" target="_blank"> <p class="title">bioSite</p> </a>
+                  
+                          </div>
+                        </div> 
+                      </div>
+                      <div class="round">
+                          <img src="Images/bioSiteProto.jpg" alt="Image of my bioSite Prototype" >
+                         <div class="top-coat">
+                           <div class="caption">
+                               <a href="https://github.com/kfunk17/bioSite-prototype" target="_blank"> <p class="title">bioSite Prototypes</p> </a>
                         
-                <div class="navbar" id="navbar">
-                        <a class="active" href="../index.html#logo" href="javascript:void(0)">Home</a> 
-                        <a href="../index.html#article" href="javascript:void(0)">About</a> 
-                        <a href="../index.html#heading" href="javascript:void(0)">Projects</a>
-                        <a href="funk-diagrams.html">Diagrams</a>
-                        <a href="../web-420/funk-rest.html">Presentations</a>   
-                        <a href="../index.html#cont" href="javascript:void(0)">Contact</a>
-                </div>
-    
+                           </div>
+                         </div> 
+                       </div>
+                       <div class="round">
+                          <img src="Images/code.jpg" alt="Image of code" >
+                         <div class="top-coat">
+                           <div class="caption">
+                               <a href="https://github.com/kfunk17/web-231" target="_blank"> <p class="title">WEB-230/231</p> </a>
+                            
+                           </div>
+                         </div> 
+                       </div>
+                       <div class="round">
+                          <img src="Images/phone.jpg" alt="Image of phone" >
+                         <div class="top-coat">
+                           <div class="caption">
+                               <a href="https://github.com/kfunk17/personal_portfolio_prototype" target="_blank"> <p class="title">Personal Portfolio Prototype</p> </a>
+ 
+                           </div>
+                         </div> 
+                       </div>
+                       <div class="round">
+                          <img src="Images/code1.jpg" alt="Image of code" >
+                         <div class="top-coat">
+                           <div class="caption">
+                               <a href="https://github.com/kfunk17/web-330" target="_blank"> <p class="title">WEB-330</p> </a>
+                         
+                           </div>
+                         </div> 
+                       </div>
+                       <div class="round">
+                          <img src="Images/code2.jpg" alt="Image of code" >
+                         <div class="top-coat">
+                           <div class="caption">
+                               <a href="https://github.com/kfunk17/web-340" target="_blank"> <p class="title">WEB-340</p> </a>
            
-    
-           </header>
+                           </div>
+                         </div> 
+                       </div>
 
-<h2 style="text-align:center">NoSQL Diagrams</h2>
+              <!--Space added between gallery and contact section-->
+              <div class="space"> </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row"></div></div>
+                    <div class="row"></div></div>
 
-<div class="row">
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/ORD.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/2.3ORD.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-  </div>
-  <div class="column">
-    <img id="size" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-  </div>
-</div>
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/ORD.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/data-structure1.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 8</div>
-      <img id="re-size"  src="../nosql-data-diagrams/data-structure2.png" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">4 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/data-structure3.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">5 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">6 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">7 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/2.3ORD.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">8 / 8</div>
-      <img id="re-size" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
+             <!--Adobe Project Gallery-->
+           
 
 
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/ORD.png" style="width:100%" onclick="currentSlide(1)" alt="ORD">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/data-structure1.png" style="width:100%" onclick="currentSlide(2)" alt="Data Structure 1">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/data-structure2.png" style="width:100%" onclick="currentSlide(3)" alt="Data Structure 2">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/data-structure3.png" style="width:100%" onclick="currentSlide(4)" alt="Data Structure 3">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%" onclick="currentSlide(5)" alt="Customer Invoice Line Item ORD">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%" onclick="currentSlide(6)" alt="Customer Invoice Line Item Data Structure">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/2.3ORD.jpg" style="width:100%" onclick="currentSlide(7)" alt="Student/Class/Enroll ORD">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%" onclick="currentSlide(8)" alt="Student/Class/Enroll Data Structure">
-    </div>
-  </div>
-</div>
+              <!--Contact Section-->
+                      <div class="cont" id="cont">
+                          <h1>Contact</h1> 
+                       <div class="box">
+                          <p class="about">Email: <a href="mailto:kfunk313@gmail.com">kfunk313@gmail.com</a></p>
+                          <p class="about">Phone: (307) 315-5908 </p>
+                          <p class="about">Github profile: <a href="https://github.com/kfunk17" target="_blank">https://github.com/kfunk17</a></p>
+                        </div>
+                      </div>
+                      
+              <!--Footer-->
+                    <footer>
+                      Built by Karie Funk 2019
+                    </footer>
 
-<a href="../index.html"><button>Go Back</button></a>
+                    <script>
 
-
-
-<!--Footer-->
-<footer> Built by Karie Funk 2019 </footer>
-
-
-<script>
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-    
+                      
+                        window.onscroll = function() {myFunction()};
+                        
+                        var navbar = document.getElementById("navbar");
+                        var sticky = navbar.offsetTop;
+                        
+                        function myFunction() {
+                          if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                          } else {
+                            navbar.classList.remove("sticky");
+                          }
+                        }
+                        </script>
+              
 </body>
-</html>
+</html> 
+                                   
+      
+                 
+             
+                       
+        
+                
+                    
+             
