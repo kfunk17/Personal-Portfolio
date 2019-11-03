@@ -80,7 +80,7 @@ body {
 }
 
 .row{
-  padding-top:70px;
+  padding-top:10px;
   padding-bottom: 50px;
 }
 
@@ -302,6 +302,12 @@ button:hover{
   <div class="column">
     <img id="size" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
   </div>
+  <div class="column">
+    <img id="size" src="../nosql-data-diagrams/3.2ORD.png" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img id="size" src="../nosql-data-diagrams/3.2NoSQL.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+  </div>
 </div>
 
 <div id="myModal" class="modal">
@@ -309,43 +315,53 @@ button:hover{
   <div class="modal-content">
 
     <div class="mySlides">
-      <div class="numbertext">1 / 8</div>
+      <div class="numbertext">1 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/ORD.png" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">2 / 8</div>
+      <div class="numbertext">2 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/data-structure1.png" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">3 / 8</div>
+      <div class="numbertext">3 / 10</div>
       <img id="re-size"  src="../nosql-data-diagrams/data-structure2.png" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">4 / 8</div>
+      <div class="numbertext">4 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/data-structure3.png" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">5 / 8</div>
+      <div class="numbertext">5 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/2.2ORD.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">6 / 8</div>
+      <div class="numbertext">6 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/2.2DS.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">7 / 8</div>
+      <div class="numbertext">7 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/2.3ORD.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">8 / 8</div>
+      <div class="numbertext">8 / 10</div>
       <img id="re-size" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">9 / 10</div>
+        <img id="re-size" src="../nosql-data-diagrams/3.2ORD.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">10 / 10</div>
+        <img id="re-size" src="../nosql-data-diagrams/3.2NoSQL.jpg" style="width:100%">
     </div>
     
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -380,6 +396,12 @@ button:hover{
     <div class="column">
       <img class="demo cursor" src="../nosql-data-diagrams/2.3DS.jpg" style="width:100%" onclick="currentSlide(8)" alt="Student/Class/Enroll Data Structure">
     </div>
+    <div class="column">
+      <img class="demo cursor" src="../nosql-data-diagrams/3.2ORD.png" style="width:100%" onclick="currentSlide(9)" alt="Student/Class/Enroll Data Structure">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="../nosql-data-diagrams/3.2NoSQL.jpg" style="width:100%" onclick="currentSlide(10)" alt="Student/Class/Enroll Data Structure">
+    </div>
   </div>
 </div>
 
@@ -392,6 +414,7 @@ button:hover{
 
 
 <script>
+
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
